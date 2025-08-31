@@ -26,7 +26,7 @@ int choice;
 while(1){
 printf("\nE-Commerce Product Management\n");
 printf("1. Add Product\n");
-18
+
 printf("2. Display All Products\n");
 printf("3. Search Product\n");
 printf("4. Delete Product\n");
@@ -60,7 +60,7 @@ if(!newProduct){
 printf("Memory allocation failed.\n");
 return;
 }
-19
+
 printf("Enter product ID: ");
 scanf("%d",&newProduct->id);
 getchar();
@@ -94,7 +94,7 @@ scanf("%d",&id);
 while (head!=NULL){
 if (head->id==id){
 printf("Product found: ID: %d, Name: %s, Price: %.2f, Quantity: %d\n",head-
-20
+
 >id,head->name,head->price,head->quantity);
 found=1;break;
 }
@@ -128,7 +128,7 @@ printf("Product deleted successfully.\n");
 void enqueueOrder(Queue** front,Queue** rear,Product* product){
 Queue* newOrder=(Queue*)malloc(sizeof(Queue));
 newOrder->product=product;
-21
+
 newOrder->next=NULL;
 if(*rear==NULL){
 *front=*rear=newOrder;
